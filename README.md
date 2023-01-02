@@ -1,5 +1,5 @@
 # 💫About Me :
-🔭 I’m currently working on Fair Team formation using machine learning, Efficient personalized query refinement using reranking.
+🔭 I’m currently working on personalized query refinement using text to text transformers.
 
 ## 🌐Socials
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/yogeswarl) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@@yogeswarl) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/yogeswarl) 
