@@ -1,6 +1,8 @@
 # 💫About Me :
-🔭 I’m currently working on [Repair](https://github.com/fani-lab/RePair): an open source Toolkit for Query Refinement Gold Standard Generation
-
+- 🔭 I’m currently working on [Repair](https://github.com/fani-lab/RePair): an open source Toolkit for Query Refinement Gold Standard Generation.
+- 🌱 I'm currenty learning Github actions, Docker and pursuing a Data Science Certificaiton with DataCamp.
+- 🗺 Currently exploring Vector databases and LLMs.
+- ☁️ Ask me about Python, Information Retrieval, NodeJs, React, Front end Development and Databases.
 
 ## 🌐Socials
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/yogeswarl) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@@yogeswarl) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/yogeswarl) 
