@@ -1,1 +1,11 @@
-@import "../scss/variables", "../scss/reset";
+
+@import '../scss/utilities/variables',
+        '../scss/utilities/mixin',
+        '../scss/utilities/helper',
+        '../scss/utilities/type';
+
+@import '../scss/layout/container',
+        '../scss/layout/modal',
+        '../scss/layout/section';
+
+@import '../scss/components/stars';

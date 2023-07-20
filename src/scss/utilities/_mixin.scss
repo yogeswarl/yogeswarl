@@ -1,0 +1,37 @@
+//ex: @include size(24px);
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+//ex: @include text-truncate(100px);
+@mixin text-truncate($width) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $width;
+}
+
+@mixin breakpoint($point) {
+
+  @if $point == phone {
+      @media (max-width: $phone) { @content; }
+  } @else if $point == desktop {
+    @media (max-width: $desktop) { @content; }
+  } 
+}
+
+@mixin spacings($prop,$pos) {
+  @each $name,$val in $spacing {
+      &-#{$name} {
+          @each $x in $pos {
+              #{$prop}-#{$x}: #{$val};
+          }
+      }
+  }
+  &-reset {
+      @each $x in $pos {
+          #{$prop}-#{$x}: 0 !important;
+      }
+  }
+}

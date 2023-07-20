@@ -1,0 +1,87 @@
+.fx{
+  display: flex;
+  &-sb{
+    justify-content: space-between;
+  }
+  &-cv{
+    align-items: center;
+  }
+  &-end-v{
+    align-items: flex-end;
+  }
+  &-ch{
+    justify-content: center;
+  }
+  &-ce{
+    justify-content: flex-end;
+  }
+  &-c{
+    flex-direction: column;
+    @include breakpoint(desktop){
+     &-nd{
+      flex-direction: column;
+     } 
+    }
+    @include breakpoint(phone){
+      &-m{
+        flex-direction: column;
+      }
+    }
+  }
+  &-grow{
+    flex-grow: 1;
+  }
+  &-shrink{
+    flex-shrink: 0;
+  }
+  &-align-start{
+    align-self: flex-start;
+  }
+  &-align-end{
+    align-self: flex-end;
+  }
+}
+.m{
+  &b{
+    @include spacings(margin,(bottom))
+  }
+  &r{
+    @include spacings(margin, (right))
+  }
+  &l{
+    @include spacings(margin, (left))
+  }
+  &t{
+    @include spacings(margin, (top))
+  }
+  &h-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &l-auto{
+    margin-left: auto;
+  }
+  &r-auto{
+    margin-right: auto;
+  }
+}
+
+.col-2 > *{
+  flex-basis: 47%;
+}
+.col-3 > *{
+  flex-basis: 31%;
+}
+.parent{
+  height: 100%;
+}
+.inner-container{
+  max-width: 1042px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

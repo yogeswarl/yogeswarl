@@ -1,0 +1,99 @@
+.heading {
+	font-size: 25px;
+	line-height: 29px;
+	&-sm {
+		font-size: 20px;
+		line-height: 23px;
+	}
+	&-lg {
+		font-size: 30px;
+		line-height: normal;
+	}
+	&-xl{
+		font-size: 37px;
+		line-height: normal;
+	}
+}
+.text {
+	font-size: 16px;
+	&-xs {
+		font-size: 10px;
+	}
+	&-sm {
+		font-size: 12px;
+	}
+	&-md {
+		font-size: 14px;
+		&-variant {
+			font-size: 15px;
+			line-height: 18px;
+		}
+	}
+	&-lg {
+		font-size: 18px;
+	}
+	&-xl {
+		font-size: 20px;
+	}
+}
+
+.fw {
+	&-thin{
+		font-weight: 300;
+	}
+	&-medium {
+		font-weight: 500;
+	}
+	&-semibold {
+		font-weight: 600;
+	}
+	&-bold {
+		font-weight: 700;
+	}
+	&-black {
+		font-weight: 900;
+	}
+}
+.tc {
+	&-primary {
+		color: $color-black;
+		&-dark {
+			color: $color-black-900;
+		}
+	}
+	&-white {
+		color: $color-white;
+	}
+	&-grey {
+		color: $color-grey;
+		&-light {
+			color: $color-grey-800;
+		}
+	}
+	&-orange{
+		color: $color-orange;
+	}
+	&-invalid {
+		color: $color-invalid;
+	}
+	&-warning {
+		color: $color-warning;
+	}
+	&-success {
+		color: $color-success;
+	}
+	&-info {
+		color: $color-info;
+	}
+}
+.t {
+	&-allcaps {
+		text-transform: uppercase;
+	}
+	&-capitalise {
+		text-transform: capitalize;
+	}
+	&-italic {
+		font-style: italic;
+	}
+}
