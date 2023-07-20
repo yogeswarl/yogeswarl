@@ -1,32 +1,31 @@
 .star{
-  animation: twinkle 2s infinite;
+  animation: twinkle 10s infinite linear;
   opacity: 0.5;
   transform: scale(1);
   &.top-left{
     top: 5%;
     left: 5%;
-    animation-delay: 0.5s;
+    animation-delay: 2s;
   }
   &.top-right{
     top: 5%;
     right: 5%;
-    animation-delay: 1s;
+    animation-delay: 8s;
   }
   &.center{
     top: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
-
   }
   &.bottom-left{
     bottom: 5%;
     left: 5%;
-    animation-delay: 1.5s;
+    animation-delay: 6s;
   }
   &.bottom-right{
     bottom: 5%;
     right: 5%;
-    animation-delay: 2s;
+    animation-delay: 4s;
   }
   
   
@@ -36,11 +35,11 @@
     opacity: 0.5;
     transform: scale(1);
   }
-  50% {
+  5%  {
     opacity: 1;
-    transform: scale(2);
+    transform: scale(3);
   }
-  100% {
+  10%, 100% {
     opacity: 0.5;
     transform: scale(1);
   }
