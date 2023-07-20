@@ -1,6 +1,5 @@
 .star{
   animation: twinkle 2s infinite;
-
   opacity: 0.5;
   transform: scale(1);
   &.top-left{
@@ -12,6 +11,12 @@
     top: 5%;
     right: 5%;
     animation-delay: 1s;
+  }
+  &.center{
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+
   }
   &.bottom-left{
     bottom: 5%;
