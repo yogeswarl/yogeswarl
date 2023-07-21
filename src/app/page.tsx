@@ -18,18 +18,19 @@ export default function Home() {
       <main className={`${Style.main} ${Style.parent}`}>
         
         {/* section 1 */}
-        <MainSection classname={[Style.fx, Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"],Style["slide-in"]]}>
-          <div className={`${Style['inner-container']}`}>
+        <MainSection id="section1" classname={[Style.fx, Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"],Style["slide-in"], Style["mb-12"] ]}>
+          <article className={`${Style['inner-container']}`}>
             <h1 className={`${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Hey 👋 , I am Yogeswar. Welcome to my portfolio</h1>
-          </div>
+          </article>
+          <a className={`${Style['icon-scroll']}`} href="#section2"></a>
         </MainSection>
 
         {/* section 2 */}
-        <MainSection classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-ch"], Style["main-section"]]}>
+        <MainSection id="section2" classname={[Style.fx, Style["pt-18"],Style["fx-c"], Style["fx-ch"], Style.container, Style["main-section"]]}>
 
           {/* article 1 */}
-          <article className={`${Style.fx} ${Style["fx-c-m"]} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-20"]}`}>
-            <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]}`}>
+          <article className={`${Style.fx} ${Style["fx-c-m"]} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-10"]}`}>
+            <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]} ${Style["mr-auto-m"]}`}>
               <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>3+ years of experience working on the front end.</h2>
             </div>
               <ul className={`${Style["icon-list"]} ${Style["mr-auto-m"]} ${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]}`}>
@@ -43,7 +44,7 @@ export default function Home() {
 
           {/* article 2 */}
           <article className={`${Style.fx} ${Style["fx-c-m"]} ${Style["fx-sb"]} ${Style["fx-cv"]}`}>
-            <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]}`}>
+            <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]} ${Style["mr-auto-m"]}`}>
               <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>2+ years of experience working on the back end.</h2>
             </div>
             <ul className={`${Style["icon-list"]} ${Style["mr-auto-m"]} ${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]}`}>
@@ -56,13 +57,13 @@ export default function Home() {
           </article>
         </MainSection>
         {/* section 3 */}
-        <MainSection classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
-          <div className={`${Style['inner-container']}`}>
+        <MainSection id="section3" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
+          <article className={`${Style['inner-container']}`}>
             <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Currently Pursuing MSc in Computer Science - Artificial Intelligence at UWindsor</h2>
-          </div>
+          </article>
         </MainSection>
         {/* section 4 */}
-        <MainSection classname={[Style.container, Style["main-section"]]}>
+        <MainSection id="section4"classname={[Style.container, Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained knowledge</h2>
           <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}` }>
             <li className={`${Style.card} ${Style["mb-10"]}`}>

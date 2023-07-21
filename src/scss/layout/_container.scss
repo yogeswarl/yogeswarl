@@ -44,6 +44,14 @@
     align-self: flex-end;
   }
 }
+.p{
+  &t{
+    @include spacings(padding,(top))
+  }
+  &b{
+    @include spacings(padding,(bottom))
+  }
+}
 .m{
   &b{
     @include spacings(margin,(bottom))

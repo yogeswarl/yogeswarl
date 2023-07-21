@@ -7,6 +7,7 @@ import Style from '../../app/page.module.scss'
 export const MainSection : React.FC<ComponentProps> = ({
   classname,
   children,
+  id
 }): JSX.Element => {
   const ref = React.useRef<HTMLElement | null>(null)
   const entry = useIntersectionObserver(ref, {})
@@ -20,7 +21,7 @@ export const MainSection : React.FC<ComponentProps> = ({
     ref.current?.classList.remove(`${Style["slide-in"]}`)
   }
 
-  return <section ref = {ref} className={`${Array.isArray(classname) ? classname.join(" "): classname}`}>{children}</section>;
+  return <section ref = {ref} id={id} className={`${Array.isArray(classname) ? classname.join(" "): classname}`}>{children}</section>;
 }
 
         

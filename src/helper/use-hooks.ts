@@ -7,9 +7,9 @@ interface Args extends IntersectionObserverInit {
 export function useIntersectionObserver(
   elementRef: RefObject<Element>,
   {
-    threshold = 0,
+    threshold = 0.2,
     root = null,
-    rootMargin = '0px 0px -400px 0px',
+    rootMargin = '0px 0px 0px 0px',
     freezeOnceVisible = false,
   }: Args,
 ): IntersectionObserverEntry | undefined {

@@ -9,17 +9,6 @@
   display: block;
   clear: both;
 }
-
-.page-border {
-  background-color: #296c86;
-  z-index: 100;
-  &.horizontal {
-    @include size(100%, 22px);
-  }
-  &.vertical {
-    @include size(22px, 100%);
-  }
-}
 .pos {
   &-rel {
     position: relative;

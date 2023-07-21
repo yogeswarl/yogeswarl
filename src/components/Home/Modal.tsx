@@ -9,9 +9,10 @@ export const Modal : React.FC<ComponentProps> = ({
     setPopupVisible(!popupVisible)
   }
   return (
+    
     <div className={`${Array.isArray(classname) ? classname.join(" "): classname}`}>
       <button onClick={togglePopup}>Click</button>
-      {children}
+      {popupVisible && (children)}
     </div>
   );
 }

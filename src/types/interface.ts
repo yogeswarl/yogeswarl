@@ -3,4 +3,5 @@ export interface TagClassnames {
 }
 export interface ComponentProps extends TagClassnames {
   children: React.ReactNode
+  id?: string
 }
