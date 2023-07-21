@@ -1,10 +1,11 @@
 import { Fragment } from 'react'
+import { montserrat } from './layout';
 import Style from './page.module.scss'
 import Image from "next/image";
-import {MainSection} from '@/components/Home/section'
+import {MainSection} from '@/components/Home/Section'
 export default function Home() {
-  const frontendIcons: string[] = ["react","typescript","html","css3","tailwindcss","sass","webpack","google-analytics"];
-  const backendIcons: string[] = ["python", "mongodb","my-sql","express","nextjs","rest-api","ab-testing","google-cloud","github-actions","stripe"]
+  const frontendIcons: string[] = ["react","javascript","html5","css3","sass","bootstrap","tailwindcss","webpack","google-analytics","google-appengine"];
+  const backendIcons: string[] = ["node","express","typescript","nextjs","python","fastapi","mongodb","my-sql","rest-api","e2e-testing","google-cloud","github-actions","stripe","wordpress"]
   return (
     <Fragment>
       {/* need to become a component */}
@@ -27,11 +28,11 @@ export default function Home() {
         <MainSection classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-ch"], Style["main-section"]]}>
 
           {/* article 1 */}
-          <article className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-20"]}`}>
-            <div className={`${Style["inner-container-sm"]}`}>
+          <article className={`${Style.fx} ${Style["fx-c-m"]} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-20"]}`}>
+            <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]}`}>
               <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>3+ years of experience working on the front end.</h2>
             </div>
-              <ul className={`${Style["icon-list"]} ${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]}`}>
+              <ul className={`${Style["icon-list"]} ${Style["mr-auto-m"]} ${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]}`}>
                 {frontendIcons.map((icon,index) => (
                   <li key={icon} className={`${index%4!==0 ? Style["ml-12"] : null } ${Style["icon-list-item"]}`} data-tooltip={`${icon}`}>
                     <Image src={`/${icon}-icon.svg`} alt={icon} width={62} height={62} />
@@ -41,11 +42,11 @@ export default function Home() {
           </article>
 
           {/* article 2 */}
-          <article className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]}`}>
-            <div className={`${Style["inner-container-sm"]} ${Style["fx-shrink"]}`}>
+          <article className={`${Style.fx} ${Style["fx-c-m"]} ${Style["fx-sb"]} ${Style["fx-cv"]}`}>
+            <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]}`}>
               <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>2+ years of experience working on the back end.</h2>
             </div>
-            <ul className={`${Style["icon-list"]} ${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]}`}>
+            <ul className={`${Style["icon-list"]} ${Style["mr-auto-m"]} ${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]}`}>
               {backendIcons.map((icon,index) => (
                 <li key={icon} className={`${index%4!==0 ? Style["ml-12"] : null } ${Style["icon-list-item"]}`} data-tooltip={`${icon}`}>
                   <Image src={`/${icon}-icon.svg`} alt={icon} width={62} height={62} />
@@ -54,12 +55,33 @@ export default function Home() {
             </ul>
           </article>
         </MainSection>
+        {/* section 3 */}
         <MainSection classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
           <div className={`${Style['inner-container']}`}>
-            <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Pursuing MSc in Computer Science - Artificial Intelligence at the University of Windsor</h2>
+            <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Currently Pursuing MSc in Computer Science - Artificial Intelligence at UWindsor</h2>
           </div>
         </MainSection>
+        {/* section 4 */}
+        <MainSection classname={[Style.container, Style["main-section"]]}>
+          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained knowledge</h2>
+          <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}` }>
+            <li className={`${Style.card} ${Style["mb-10"]}`}>
+              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
+                <h3 className={`${Style.heading}`}>University of Windsor</h3>
+                <p className={`${Style["text-xl"]}`}>Sept 2021 - Aug 2023 </p>
+              </div>
+              <p className={`${Style["text-lg"]}`} >MSc Computer Science - AI Specialization</p>
+            </li>
+            <li className={`${Style.card}`}>
+              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
+                <h3 className={`${Style.heading}`}>Hindustan Institute of Technology and Science</h3>
+                <p className={`${Style["text-xl"]}`}>June 2015 - May 2019</p>
+              </div>
+              <p className={`${Style["text-lg"]}`} >B.Tech Computer Science - Cloud Computing Specialization</p>
+            </li>
+          </ul>
 
+        </MainSection>
       </main>
     </Fragment>
   )

@@ -8,10 +8,19 @@
 	&-lg {
 		font-size: 48px;
 		line-height: normal;
+		@include breakpoint(desktop){
+			font-size: 32px;
+     }
 	}
 	&-xl{
 		font-size: 60px;
 		line-height: normal;
+		@include breakpoint(desktop){
+			font-size: 48px;
+     }
+    @include breakpoint(phone){
+      font-size: 32px;
+    }
 	}
 }
 .text {
@@ -33,7 +42,7 @@
 		font-size: 18px;
 	}
 	&-xl {
-		font-size: 20px;
+		font-size: 24px;
 	}
 }
 

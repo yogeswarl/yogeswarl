@@ -1,9 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Montserrat, Poppins } from 'next/font/google'
 
-const inter = Poppins({weight:["300","400","600"] ,subsets: ['latin'] })
-
+const poppins = Poppins({weight:["300","400","600"] ,subsets: ['latin'] })
+export const montserrat = Montserrat({weight:["400","600"] ,subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Yogeswar Lakshmi Narayanan | Full Stack Developer ',
   description: 'Welcome to My Portfolio Website 🎉',
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${poppins.className}`}>{children}</body>
     </html>
   )
 }

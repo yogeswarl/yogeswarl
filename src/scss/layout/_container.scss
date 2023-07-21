@@ -63,9 +63,29 @@
   }
   &l-auto{
     margin-left: auto;
+    @include breakpoint(desktop){
+      &-nd{
+       margin-left: auto;
+      } 
+     }
+    @include breakpoint(phone){
+      &-m{
+        margin-left: auto;
+      }
+    }
   }
   &r-auto{
     margin-right: auto;
+    @include breakpoint(desktop){
+      &-nd{
+       margin-right: auto;
+      } 
+     }
+    @include breakpoint(phone){
+      &-m{
+        margin-right: auto;
+      }
+    }
   }
 }
 

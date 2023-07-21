@@ -1,13 +1,10 @@
 "use client";
 import * as React from "react";
 import {useIntersectionObserver} from "@/helper/use-hooks";
-import { TagClassnames } from "@/types/interface";
+import { ComponentProps } from "@/types/interface";
 import Style from '../../app/page.module.scss'
-interface Props extends TagClassnames {
-  children: React.ReactNode
-}
 
-export const MainSection : React.FC<Props> = ({
+export const MainSection : React.FC<ComponentProps> = ({
   classname,
   children,
 }): JSX.Element => {
