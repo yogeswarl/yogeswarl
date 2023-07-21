@@ -12,9 +12,7 @@ export const MainSection : React.FC<ComponentProps> = ({
   const ref = React.useRef<HTMLElement | null>(null)
   const entry = useIntersectionObserver(ref, {})
   const isVisible = !!entry?.isIntersecting
-  console.log(`Render classes ${children}`, { isVisible })
   if(isVisible){
-    console.log("Visible")
     ref.current?.classList.add(`${Style["slide-in"]}`)
   }
   else {

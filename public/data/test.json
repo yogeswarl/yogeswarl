@@ -1,12 +1,23 @@
 {
-  "posts": [
+  "experience": [
     {
-      "slug": "my-first-post",
-      "title": "My First Post"
+      "name": "CIBC",
+      "time_period": "",
+      "role": "Application Developer Intern",
+      "description": ["point1","point2"]
     },
     {
-      "slug": "my-second-post",
-      "title": "My Second Post"
+      "name": "Full Creative",
+      "time_period": "",
+      "role": "Front-end Web Developer",
+      "description": ["point1","point2"]
+    },
+    {
+      "name": "Freelancer(Contract)",
+      "time_period": "",
+      "role": "Full Stack Developer",
+      "description": ["point1","point2"]
     }
+
   ]
 }

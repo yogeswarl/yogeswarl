@@ -3,6 +3,7 @@ import { montserrat } from './layout';
 import Style from './page.module.scss'
 import Image from "next/image";
 import {MainSection} from '@/components/Home/Section'
+import { Modal } from '@/components/Home/Modal';
 export default function Home() {
   const frontendIcons: string[] = ["react","javascript","html5","css3","sass","bootstrap","tailwindcss","webpack","google-analytics","google-appengine"];
   const backendIcons: string[] = ["node","express","typescript","nextjs","python","fastapi","mongodb","my-sql","rest-api","e2e-testing","google-cloud","github-actions","stripe","wordpress"]
@@ -63,7 +64,7 @@ export default function Home() {
           </article>
         </MainSection>
         {/* section 4 */}
-        <MainSection id="section4"classname={[Style.container, Style["main-section"]]}>
+        <MainSection id="section4" classname={[Style.container, Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained knowledge</h2>
           <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}` }>
             <li className={`${Style.card} ${Style["mb-10"]}`}>
@@ -81,6 +82,11 @@ export default function Home() {
               <p className={`${Style["text-lg"]}`} >B.Tech Computer Science - Cloud Computing Specialization</p>
             </li>
           </ul>
+        </MainSection>
+        <MainSection id="section4" classname={`${Style["main-section"]}`}>
+          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained experience</h2>
+          <Modal passedKey='experience' classname={`${Style["mb-4"]} ${Style.container} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}`}>
+          </Modal>
 
         </MainSection>
       </main>

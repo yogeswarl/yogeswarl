@@ -1,0 +1,24 @@
+.modal{
+  &-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    @include size(100%, 100%);
+    mix-blend-mode: luminosity;
+    background: $color-black-500;
+    backdrop-filter: blur(5px);
+  }
+  &-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    max-width: 940px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px 32px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+  }
+}
