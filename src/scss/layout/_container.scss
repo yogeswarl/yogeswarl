@@ -1,5 +1,8 @@
 .fx{
   display: flex;
+  &-w{
+    flex-wrap: wrap;
+  }
   &-sb{
     justify-content: space-between;
   }
@@ -79,6 +82,9 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  &-sm{
+    max-width: 615px;
+  }
 }
 .container{
   max-width: 1200px;
