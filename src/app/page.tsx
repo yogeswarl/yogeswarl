@@ -82,16 +82,16 @@ export default async function Home({searchParams}: Props) {
         {/* section 4 */}
         <MainSection id="section4" classname={[Style.container, Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained knowledge</h2>
-          <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}` }>
-            <li className={`${Style.card} ${Style["mb-10"]}`}>
-              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
+          <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}`}>
+            <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']} ${Style["mb-10"]}`}>
+              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style['fx-c-nd']} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
                 <h3 className={`${Style.heading}`}>University of Windsor</h3>
                 <p className={`${Style["text-xl"]}`}>Sept 2021 - Aug 2023 </p>
               </div>
               <p className={`${Style["text-lg"]}`}>MSc Computer Science - AI Specialization</p>
             </li>
-            <li className={`${Style.card}`}>
-              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
+            <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']}`}>
+              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style['fx-c-nd']} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
                 <h3 className={`${Style.heading}`}>Hindustan Institute of Technology and Science</h3>
                 <p className={`${Style["text-xl"]}`}>June 2015 - May 2019</p>
               </div>
@@ -99,11 +99,12 @@ export default async function Home({searchParams}: Props) {
             </li>
           </ul>
         </MainSection>
-        <MainSection id="section5" classname={`${Style["main-section"]}`}>
+        {/* section 5 */}
+        <MainSection id="section5" classname={`${Style["main-section"]} ${Style["container"]}`}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained Experience</h2>
           <ul className={`${Style["mb-4"]} ${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}` }>
             {data.experience as Data && data.experience.map((exp:Data, index:number) => ( 
-             <li key ={index} className={`${index} ${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-8"]}`}>
+             <li key ={index} className={`${index} ${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
              <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{exp.name}</h3>
              <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{exp.role}</p>
              <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}> What I did here &gt;</Link>

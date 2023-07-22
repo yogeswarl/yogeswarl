@@ -1,5 +1,15 @@
 .fx{
   display: flex;
+  @include breakpoint(desktop){
+    &-nd{
+      display: flex;
+    } 
+   }
+   @include breakpoint(phone){
+     &-m{
+      display: flex;
+     }
+   }
   &-w{
     flex-wrap: wrap;
   }
@@ -8,12 +18,32 @@
   }
   &-cv{
     align-items: center;
+    @include breakpoint(desktop){
+      &-nd{
+        align-items: center;
+      } 
+     }
+     @include breakpoint(phone){
+       &-m{
+        align-items: center;
+       }
+     }
   }
   &-end-v{
     align-items: flex-end;
   }
   &-ch{
     justify-content: center;
+    @include breakpoint(desktop){
+      &-nd{
+        justify-content: center;
+      } 
+     }
+     @include breakpoint(phone){
+       &-m{
+        justify-content: center;
+       }
+     }
   }
   &-ce{
     justify-content: flex-end;

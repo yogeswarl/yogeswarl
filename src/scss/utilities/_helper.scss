@@ -57,7 +57,18 @@
 .ta {
   &-center {
     text-align: center;
+    @include breakpoint(desktop){
+      &-nd{
+        text-align: center;
+      } 
+     }
+     @include breakpoint(phone){
+       &-m{
+        text-align: center;
+       }
+     }
   }
+
   &-left {
     text-align: left;
   }
