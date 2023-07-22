@@ -26,6 +26,43 @@
       "role": "Full Stack Developer",
       "description": ["Revamped entire code structure of an existing customer dashboard","point2"]
     }
-
+  ],
+  "projects" : [
+    {
+      "name":"User Authentication with Email OTP verification",
+      "description":"Node.js Restful api implementation with role based authentication and authorization of user with email OTP verification and Postman API testing.",
+      "link":"https://github.com/yogeswarl/node-auth"
+    },
+    {
+      "name":"Repair: Personalized Query Refinement",
+      "description":"Extensible and Configurable Toolkit for Query Refinement Gold Standard Generation using Conditional Transformers with user context awareness.",
+      "link":"https://github.com/fani-lab/RePair"
+    },
+    {
+      "name":"Tutoring Learning management system",
+      "description":"Developed an onboarding, registration and signup flow with role based authentication for an admin console dashboard to manage students, tutors and courses with date picker functionality and Data visualization of student progress.",
+      "link":""
+    },
+    {
+      "name":"Front End Mentor Challenges solutions",
+      "description":"Developed multiple responsive websites with User interaction and modular and optimized styling as solutions for the FrontEnd Mentor Challange.",
+      "link":"https://yogeswarl.github.io/Frontend-Mentor-Challenges/"
+    },
+    {
+      "name":"Automated online file conversion using Pupeteer",
+      "description":"Puppeteer-based Node.js CLI for file conversion to PDF format. Allows users to specify the URL for conversion with coverage tracking, viewport configuration and scrolling functionality.",
+      "link":"https://gist.github.com/yogeswarl/fa734a3aa4c73540b8f0d972d76601dd"
+    },
+    {
+      "name":"Online Ecommerce Application",
+      "description":"Full stack Ecommerce application with user authentication, email verification, password reset, cart and payment functionality with React, Express, Node.js and MongoDB through Stripe API.",
+      "link":"https://github.com/yogeswarl/Online-Shop"
+    },
+    {
+      "name":"Pyserini: Python toolkit for reproducible information retrieval research.",
+      "description":"Contributed to reproduction of results and removal of duplicate results in dense retrieval.",
+      "link":"https://github.com/castorini/pyserini"
+    }
+    
   ]
 }

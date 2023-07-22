@@ -10,6 +10,12 @@
     overflow: hidden;
     opacity: 0;
     padding-top:80px;
+    @include breakpoint(desktop){
+      max-height: unset;
+      height: auto;
+      min-height: 100vh;
+
+    }
     &.slide-in{
       transform: translateY(0);
       opacity: 1;
@@ -47,4 +53,25 @@
     }
   }
   
+}
+.list-collection{
+  max-height:calc(100% - 100px);
+  overflow: auto;
+  margin-bottom: 24px;
+  @include breakpoint(desktop){
+    max-height: unset;
+    overflow: hidden;
+  }
+}
+.icon-move{
+  display: inline-block;
+  vertical-align: middle;
+  img{
+    vertical-align: middle;
+    transition: transform 0.2s ease-in;
+  }
+  &:hover img{
+    transform: translateX(4px)
+
+  }
 }

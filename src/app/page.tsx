@@ -21,7 +21,7 @@ async function getData() {
 export default async function Home({searchParams}: Props) {
   const frontendIcons: string[] = ["react","javascript","html5","css3","sass","bootstrap","tailwindcss","webpack","google-analytics","google-appengine"];
   const backendIcons: string[] = ["node","express","typescript","nextjs","python","fastapi","mongodb","my-sql","rest-api","e2e-testing","google-cloud","github-actions","stripe","wordpress"]
-  const data  = await getData()
+  const data = await getData()
   const showModal = searchParams?.modal;
   return (
     <Fragment>
@@ -103,16 +103,57 @@ export default async function Home({searchParams}: Props) {
         <MainSection id="section5" classname={`${Style["main-section"]} ${Style["container"]}`}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained Experience</h2>
           <ul className={`${Style["mb-4"]} ${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}` }>
-            {data.experience as Data && data.experience.map((exp:Data, index:number) => ( 
+            {data.experience && data.experience.map((exp:Data, index:number) => ( 
              <li key ={index} className={`${index} ${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
              <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{exp.name}</h3>
              <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{exp.role}</p>
-             <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}> What I did here &gt;</Link>
+             <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}> What I did here<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>
            </li>
             ))}
           </ul>
         </MainSection>
         {showModal && <Modal data={data.experience} id={Number(searchParams?.id)} />}
+        {/* section 6 */}
+        <MainSection id="section6" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
+          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Projects and Open source contributions</h2>
+          <ul className={`${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${Style["list-collection"]} ${montserrat.className}` }>
+          {data.projects && data.projects.map((project:Data, index:number) => ( 
+             <li key ={index} className={`${index} ${Style.card} ${Style['card-md']} ${Style["mh-auto"]} ${Style["mb-8"]}`}>
+             <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{project.name}</h3>
+             <p className={`${Style["text"]} ${Style["mb-2"]}`} >{project.description}</p>
+             {project.link && <Link target='_blank' className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href={`${project.link}`}> Link to project<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>}
+           </li>
+            ))}
+          </ul>
+          <Link target='_blank' className={`${Style["mb-4"]} ${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href="https://github.com/yogeswarl">View more<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>
+        </MainSection>  
+        {/* section 7 */}
+        <MainSection id="section3" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
+          <article className={`${Style['inner-container']}`}>
+            <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>I am Actively seeking Fall 23&apos; job opportunities in Data Science, Full stack / Front end development and Machine learning roles.</h2>
+          </article>
+        </MainSection>
+        {/* section 8 */}
+         <MainSection id="section4" classname={[Style.container, Style["main-section"]]}>
+          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Certifications I have gained over</h2>
+          <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}`}>
+            <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']} ${Style["mb-10"]}`}>
+              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style['fx-c-nd']} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
+                <h3 className={`${Style.heading}`}>University of Windsor</h3>
+                <p className={`${Style["text-xl"]}`}>Sept 2021 - Aug 2023 </p>
+              </div>
+              <p className={`${Style["text-lg"]}`}>MSc Computer Science - AI Specialization</p>
+            </li>
+            <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']}`}>
+              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style['fx-c-nd']} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
+                <h3 className={`${Style.heading}`}>Hindustan Institute of Technology and Science</h3>
+                <p className={`${Style["text-xl"]}`}>June 2015 - May 2019</p>
+              </div>
+              <p className={`${Style["text-lg"]}`}>B.Tech Computer Science - Cloud Computing Specialization</p>
+            </li>
+          </ul>
+        </MainSection>
+
       </main>
     </Fragment>
   )
