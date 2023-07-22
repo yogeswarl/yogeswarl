@@ -1,59 +1,49 @@
-"use client";
 import * as React from "react";
-import { ComponentProps } from "@/types/interface";
 import Style from "../../app/page.module.scss";
-interface ModalProps extends ComponentProps {
-  passedKey: string
-}
+import Link from "next/link";
 interface Data {
-  [key:string] : string
+  [key:string] : string | number | string[];
 }
-async function getData() {
-  const res = await fetch('http://localhost:3000/data/test.json')
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-  const data = await Promise.all([res.json()])
-  return data
+interface ModalProps  {
+  data: Data[];
+  id: number;
 }
 
-export const Modal: React.FC<ModalProps> = ({
-  classname,
-  passedKey
-}) => {
-  const [ModalData, setModalData] = React.useState< Data | undefined>(undefined)
-  const [popupVisible, setPopupVisible] = React.useState<boolean>(false)
-  const [data, setData] = React.useState<[]>([])
-
-  function togglePopup(data?:Data | undefined) {
-    console.log(data)
-    setModalData(data)
-    setPopupVisible(!popupVisible)
-  }
-  React.useEffect(() => {
-    getData().then((users) => {setData(users[0][`${passedKey}`])});
-  }, [passedKey]);
-  if (!data) {
-    return <div>Loading...</div>
-  }
-  return (
-    <React.Fragment>
-      <ul className={`${classname}`}>
-        {data && data.map((user: Data) => (
-          <li key ={user.name} className={`${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-8"]}`}>
-            <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{user.name}</h3>
-            <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{user.role}</p>
-            <button onClick={() =>togglePopup(user)} className={`${Style["tc-white"]} ${Style["fw-semibold"]}`}> What I did here &gt;</button>
-          </li>
-        ))}
-
-      </ul>
-      {popupVisible && <div className={`${Style["modal-overlay"]}`}>
-        <div className={`${Style["modal-content"]} ${Style["card"]}`}>
-          <button onClick={() =>togglePopup()}>&lt;</button>
-          </div>
-        </div>}
-    </React.Fragment>
-    
-  )
+export const Modal: React.FC<ModalProps> =({data,id}): JSX.Element => {
+  const modalData = data[id]
+  
+	return (
+		<div className={`${Style["modal-overlay"]}`}>
+			{modalData && (
+				<div className={`${Style["modal-content"]} ${Style["card"]}`}>
+					<div className={`${Style.fx} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-4"]}`}>
+						<div className={`${Style.fx} ${Style["fx-cv"]} ${Style["fx-ch"]}`}>
+							<Link href="/" className={`${Style["text-xl"]} ${Style["tc-white"]}`}>
+								&lt;
+							</Link>
+							<h3 className={`${Style["heading-lg"]} ${Style["ml-3"]}`}>
+								{modalData.name}
+							</h3>
+						</div>
+						<p className={`${Style["text-lg"]}`}>{modalData["time_period"]}</p>
+					</div>
+					<h4 className={`${Style["heading"]} ${Style["mb-4"]}`}>
+						{modalData.role}
+					</h4>
+					<ul className={`${Style["list-item"]}`}>
+						{Array.isArray(modalData["description"])
+							? modalData["description"].map((desc: string, index: number) => (
+									<li
+										key={index}
+										className={`${Style["text-lg"]} ${Style["mb-2"]}`}
+									>
+										{desc}
+									</li>
+							  ))
+							: null}
+					</ul>
+				</div>
+			)}
+		</div>
+	);
 }
