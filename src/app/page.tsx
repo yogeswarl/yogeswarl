@@ -21,6 +21,9 @@ async function getData() {
 export default async function Home({searchParams}: Props) {
   const frontendIcons: string[] = ["react","javascript","html5","css3","sass","bootstrap","tailwindcss","webpack","google-analytics","google-appengine"];
   const backendIcons: string[] = ["node","express","typescript","nextjs","python","fastapi","mongodb","my-sql","rest-api","e2e-testing","google-cloud","github-actions","stripe","wordpress"]
+  const techincalSkills: string[] = ["Next.js","React","Javascript","Typescript","Node.js","Express.js","Python","FastAPI","MongoDB","MySQL","REST API","E2E Testing","Google Cloud","Github Actions","Stripe","Wordpress","HTML5","CSS3","SASS","Bootstrap","Tailwind CSS","Webpack","Google Analytics","Google Cloud:- Cloud Run, Compute Engine, TPU's, App Engine, SQL","Amazon Web Services:- EC2, IAM, S3, Lambda","StrapiJs"]
+  const PersonalSkills: string[] = ["Time Management","Oral and Written Communication","Problem Solving","Teamwork","Desire to Learn","Leadership","Adaptability","Creativity","Critical Thinking","Decision Making","Self-Motivating","Stress Management","Work Ethic","Researcher"]
+  const internetAddress :Data= {"github":"https://github.com/yogeswarl","linkedin":"https://www.linkedin.com/in/yogeswarl/","twitter":"https://twitter.com/yogeswarl","medium":"https://medium.com/@yogeswarl","email":"yogi2198@gmail.com"}
   const data = await getData()
   const showModal = searchParams?.modal;
   return (
@@ -135,24 +138,49 @@ export default async function Home({searchParams}: Props) {
         </MainSection>
         {/* section 8 */}
          <MainSection id="section4" classname={[Style.container, Style["main-section"]]}>
-          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Certifications I have gained over</h2>
+          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Skills I have gained over the Years</h2>
+
+          <h3 className={`${Style["ta-center"]} ${Style["mb-6"]} ${Style["heading-lg"]} ${montserrat.className} ${Style["fw-semibold"]}`}>Techical Skills:</h3>
           <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}`}>
-            <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']} ${Style["mb-10"]}`}>
-              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style['fx-c-nd']} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
-                <h3 className={`${Style.heading}`}>University of Windsor</h3>
-                <p className={`${Style["text-xl"]}`}>Sept 2021 - Aug 2023 </p>
-              </div>
-              <p className={`${Style["text-lg"]}`}>MSc Computer Science - AI Specialization</p>
+            {techincalSkills.map((skill,index) => (<li key={index} className={`${Style['skill-box']}`}><span>{skill}</span></li>))}
+          </ul>
+          <h3 className={`${Style["ta-center"]} ${Style["mb-6"]} ${Style["heading-lg"]} ${Style["fw-semibold"]} ${montserrat.className}`}>Personal Skills:</h3>
+          <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}`}>
+            {PersonalSkills.map((skill,index) => (<li key={index} className={`${Style['skill-box']}`}><span>{skill}</span></li>))}
+          </ul>
+        </MainSection>
+
+        <MainSection id="section4" classname={[Style.container]}>
+          <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Socials</h2>
+          <ul className={`${Style["mb-8"]} ${Style["fx"]} ${Style["fx-ch"]} ${Style["fx-w"]} ${montserrat.className}`}>
+            <li className={`${Style['mb-2']} ${Style["fx"]} ${Style["fx-ch"]}`}>
+              <Image src="/github-icon.svg" alt="github icon" width={24} height={24} />
+              <Link target='_blank' className={`${Style['ml-2']} ${Style["tc-white"]} ${Style["text-xl"]} ${Style["fw-semibold"]}`} href={internetAddress.github}>Github</Link>  
             </li>
-            <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']}`}>
-              <div className={`${Style.fx} ${Style["fx-sb"]} ${Style['fx-c-nd']} ${Style["fx-cv"]} ${Style["mb-2"]}`}>
-                <h3 className={`${Style.heading}`}>Hindustan Institute of Technology and Science</h3>
-                <p className={`${Style["text-xl"]}`}>June 2015 - May 2019</p>
-              </div>
-              <p className={`${Style["text-lg"]}`}>B.Tech Computer Science - Cloud Computing Specialization</p>
+            <li className={`${Style['mb-2']} ${Style['ml-4']} ${Style["fx"]} ${Style["fx-ch"]}`}>
+              <Image src="/linkedin-icon.svg" alt="linkedin icon" width={24} height={24} />
+              <Link target='_blank' className={`${Style['ml-2']} ${Style["tc-white"]} ${Style["text-xl"]} ${Style["fw-semibold"]}`} href={internetAddress.linkedin}>Linkedin</Link>
+            </li>
+            <li className={`${Style['mb-2']} ${Style['ml-4']} ${Style["fx"]} ${Style["fx-ch"]}`}>
+              <Image src="/medium-icon.svg" alt="medium icon" width={24} height={24} />
+              <Link target='_blank' className={`${Style['ml-2']} ${Style["tc-white"]} ${Style["text-xl"]} ${Style["fw-semibold"]}`} href={internetAddress.medium}>Medium</Link>
+            </li>
+            <li className={`${Style['mb-2']} ${Style['ml-4']} ${Style["fx"]} ${Style["fx-ch"]}`}>
+              <Image src="/twitter-icon.svg" alt="twitter icon" width={24} height={24} />
+              <Link target='_blank' className={`${Style['ml-2']} ${Style["tc-white"]} ${Style["text-xl"]} ${Style["fw-semibold"]}`} href={internetAddress.twitter}>Twitter</Link>
+            </li>
+            <li className={`${Style['mb-2']} ${Style['ml-4']} ${Style["fx"]} ${Style["fx-ch"]}`}>
+              <Image src="/email-icon.svg" alt="email icon" width={24} height={24} />
+              <Link target='_blank' className={`${Style['ml-2']} ${Style["tc-white"]} ${Style["text-xl"]} ${Style["fw-semibold"]}`} href={`mailto:${internetAddress.email}`}>Email</Link>
             </li>
           </ul>
         </MainSection>
+        <footer id='footer'>
+          <div className={`${Style.container} ${Style["fx"]} ${Style["fx-c"]} ${Style["fx-cv"]} ${Style["fx-ch"]}`}>
+            <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>Made with ❤️ by Yogeswar</p>
+            <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>©{new Date().getFullYear()} Yogeswar</p>
+          </div>
+        </footer>
 
       </main>
     </Fragment>
