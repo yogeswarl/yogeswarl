@@ -98,6 +98,18 @@
   &h-auto{
     margin-left: auto;
     margin-right: auto;
+    @include breakpoint(desktop){
+      &-nd{
+       margin-left: auto;
+       margin-right: auto;
+      } 
+     }
+    @include breakpoint(phone){
+      &-m{
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
   &l-auto{
     margin-left: auto;

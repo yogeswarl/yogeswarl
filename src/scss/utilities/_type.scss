@@ -1,6 +1,9 @@
 .heading {
 	font-size: 32px;
 	line-height: normal;
+	@include breakpoint(desktop){
+		font-size: 24px;
+	}
 	&-sm {
 		font-size: 20px;
 		line-height: 23px;
