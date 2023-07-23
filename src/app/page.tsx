@@ -13,7 +13,7 @@ type Props = {
   searchParams: Record<string,string> | null | undefined
 }
 async function getData() {
-  const res = await fetch('http://localhost:3000/data/test.json')
+  const res = await fetch(`${process.env.URL}/data/test.json`)
   if (!res.ok) {
     throw new Error('Failed to fetch data')
   }
