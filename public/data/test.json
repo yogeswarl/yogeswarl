@@ -14,9 +14,9 @@
       "name": "Full Creative",
       "time_period": "Aug 2019 - July 2021",
       "role": "Front-end Web Developer",
-      "description": ["Shipped a Responsive website with 100% performance metrics on lighthouse and a load time speed index of 1.1 second following standard web practices resulting in enhanced user experience and smooth functionality. Look at my work at <b>https://www.adaptiveu.io</b>.",
+      "description": ["Shipped a Responsive website with 100% performance metrics on lighthouse and a load time speed index of 1.1 second following standard web practices resulting in enhanced user experience and smooth functionality. Look at my work at <a href='https://www.wellreceived.com/blog/' target='_blank'><b>https://www.adaptiveu.io</b></a>.",
       "Designed and tested a microservice solution with <b>less than 3 seconds response time</b> to complete automation of the certificate generation for internship students, leveraging Google Cloud functions, Node.js and pdfkit, enhancing efficiency and reducing cost.",
-      "Increased <b>branding blog's traffic to 145%</b> with a rewrite of custom Wordpress theme, implementing web optimization techniques including lazy loading, URL prefetching and ES6 javascript best practices look at my work at <b> https://www.wellreceived.com/blog/ </b>",
+      "Increased <b>branding blog's traffic to 145%</b> with a rewrite of custom Wordpress theme, implementing web optimization techniques including lazy loading, URL prefetching and ES6 javascript best practices. Look at my work at <a href='https://www.wellreceived.com/blog/' target='_blank'><b>https://www.wellreceived.com/blog/ </b></a>",
       "Implemented clean and modular code to integrate video calling into our chat application with React hooks and context API including a draggable feature for seamless user interaction between chat and phone with a smooth user experience and interface."],
       "icons":[""]
     },
@@ -24,9 +24,9 @@
       "name": "Freelancer(Contract)",
       "time_period": "Oct 2020 - Present",
       "role": "Full Stack Developer",
-      "description": ["Designed and Implemented a role based authentication and authorization for an Admin Dashboard Console for Student Learning Management system to monitor student's course progress over a time period. This project implements a custom react date picker to select a tutor's class timing with various flows such as onboarding, registration and signup for tutor and student with Data visualization of marks and attendance through ChartJs.",
-      "Developed the frontend application for an employee hours trackings system to enable employees to track their hours and generate reports for their managers. The project implements a service worker to track system movement towards working hours progress of an employee",
-      "Assisted a client to help build a user management console with project tracking and task managment functionality in PHP and MySQL with a custom calendar to track project deadlines and task completion."],
+      "description": ["Designed and Implemented a <b>role based authentication and authorization</b> for an Admin Dashboard Console for Student Learning Management system to monitor student's course progress over a time period. This project implements a custom react date picker to select a tutor's class timing with various flows such as onboarding, registration and signup for tutor and student with Data visualization of marks and attendance through ChartJs.",
+      "Developed the frontend application for an employee hours trackings system to enable employees to track their hours and generate reports for their managers. The project implements a <b>service worker to track system movement towards working hours</b> progress of an employee",
+      "Assisted a client to help build a user management console with <b>project tracking and task managment functionality in PHP and MySQL</b> with a custom calendar to track project deadlines and task completion."],
       "icons":[""]
     }
   ],

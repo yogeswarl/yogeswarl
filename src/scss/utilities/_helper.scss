@@ -139,5 +139,12 @@
       top:5px;
     }
   }
-
+}
+.list-item{
+  height: calc(100vh - 200px);
+  overflow-y:scroll;
+  word-wrap: break-word;
+  a{
+    color: $color-white;
+  }
 }

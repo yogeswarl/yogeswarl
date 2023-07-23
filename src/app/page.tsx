@@ -40,7 +40,7 @@ export default async function Home({searchParams}: Props) {
           <article className={`${Style['inner-container']}`}>
             <h1 className={`${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Hey 👋 , I am Yogeswar. Welcome to my portfolio</h1>
           </article>
-          <a className={`${Style['icon-scroll']}`} href="#section2"></a>
+          <a className={`${Style['icon-scroll']}`} href="#about"></a>
         </MainSection>
 
         {/* section 2 */}
@@ -105,7 +105,7 @@ export default async function Home({searchParams}: Props) {
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained Experience</h2>
           <ul className={`${Style["mb-4"]} ${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}` }>
             {data.experience && data.experience.map((exp, index:number) => ( 
-             <li key ={index} className={`${index} ${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
+             <li key ={index} className={`${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
              <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{exp.name}</h3>
              <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{exp.role}</p>
              <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}> What I did here<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>
@@ -175,7 +175,7 @@ export default async function Home({searchParams}: Props) {
         </MainSection>
         <footer id='footer'>
           <div className={`${Style.container} ${Style["fx"]} ${Style["fx-c"]} ${Style["fx-cv"]} ${Style["fx-ch"]}`}>
-            <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>Made with ❤️ using Next.js </p>
+            <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>Made with ❤️ using Typescript and Next.js </p>
             <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>©{new Date().getFullYear()} Yogeswar</p>
           </div>
         </footer>
