@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react';
 import { poppins } from './font'
 export const metadata: Metadata = {
   title: 'Yogeswar Lakshmi Narayanan | Full Stack Developer | Portfolio',
@@ -18,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png"/>
-        <meta property="twitter:image" content="/home_page_og.png" />
+        <meta property="twitter:image" content="https://yogeswarl.vercel.app/home_page_og.png" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Yogeswar Lakshmi Narayanan | Full Stack Developer | Portfolio Website" />
         <meta property="twitter:description" content="Full Stack Developer living in canada with over 3 years of experience building blazing fast applications for the web. Deep Learning Researcher at University of Windsor." />
@@ -32,7 +33,11 @@ export default function RootLayout({
         <link rel="alternate" href="https://yogeswarl.vercel.app/" hrefLang="x-default" />
         <link rel="canonical" href="https://yogeswarl.vercel.app/" />
       </head>
-      <body className={`${poppins.className}`}>{children}</body>
+      <body className={`${poppins.className}`}>
+        {children}
+        <Analytics />
+      </body>
+
     </html>
   )
 }
