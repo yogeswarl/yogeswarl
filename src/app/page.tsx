@@ -5,6 +5,7 @@ import Image from "next/image";
 import {MainSection} from '@/components/Home/Section'
 import { Modal } from '@/components/Home/Modal';
 import Link from 'next/link'
+import {Header} from '@/components/Header'
 interface Data {
   [key:string] : string
 } 
@@ -29,7 +30,7 @@ export default async function Home({searchParams}: Props) {
   return (
     <Fragment>
       {/* need to become a component */}
-      <header></header>
+      <Header font={montserrat} />
       <Image src="/star.svg" alt="twinkling stars" width= {10} height={10} className={`${Style["pos-fixed"]} ${Style["top-right"]} ${Style.star}`}/>
       <Image src="/star.svg" alt="twinkling stars" width= {10} height={10} className={`${Style["pos-fixed"]} ${Style["top-left"]} ${Style.star}`} />
       <Image src="/star.svg" alt="twinkling stars" width= {10} height={10} className={`${Style["pos-fixed"]} ${Style["center"]} ${Style.star}`} />
@@ -38,7 +39,7 @@ export default async function Home({searchParams}: Props) {
       <main id='main' className={`${Style.main} ${Style.parent}`}>
         
         {/* section 1 */}
-        <MainSection id="section1" classname={[Style.fx, Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"],Style["slide-in"], Style["mb-12"] ]}>
+        <MainSection id="introduction" classname={[Style.fx, Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"],Style["slide-in"], Style["mb-12"] ]}>
           <article className={`${Style['inner-container']}`}>
             <h1 className={`${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Hey 👋 , I am Yogeswar. Welcome to my portfolio</h1>
           </article>
@@ -46,8 +47,8 @@ export default async function Home({searchParams}: Props) {
         </MainSection>
 
         {/* section 2 */}
-        <MainSection id="section2" classname={[Style.fx, Style["pt-18"],Style["fx-c"], Style["fx-ch"], Style.container, Style["main-section"]]}>
-
+        <MainSection id="about" classname={[Style.fx, Style["pt-18"],Style["fx-c"], Style["fx-ch"], Style.container, Style["main-section"]]}>
+          <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]} ${Style["ta-center"]} ${Style["mb-10"]}`}>A passionate Full Stack Developer.</h2>
           {/* article 1 */}
           <article className={`${Style.fx} ${Style["fx-c-m"]} ${Style["fx-sb"]} ${Style["fx-cv"]} ${Style["mb-10"]}`}>
             <div className={`${Style["inner-container-sm"]} ${Style["mb-4"]} ${Style["mr-auto-m"]}`}>
@@ -77,13 +78,13 @@ export default async function Home({searchParams}: Props) {
           </article>
         </MainSection>
         {/* section 3 */}
-        <MainSection id="section3" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
+        <MainSection id="current" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
           <article className={`${Style['inner-container']}`}>
             <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Currently Pursuing MSc in Computer Science - Artificial Intelligence at UWindsor</h2>
           </article>
         </MainSection>
         {/* section 4 */}
-        <MainSection id="section4" classname={[Style.container, Style["main-section"]]}>
+        <MainSection id="education" classname={[Style.container, Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained knowledge</h2>
           <ul className={`${Style["mb-4"]} ${Style["fx"]} ${Style["fx-w"]} ${montserrat.className}`}>
             <li className={`${Style.card} ${Style["ta-center-nd"]} ${Style["fx-nd"]} ${Style['fx-c-nd']} ${Style['fx-cv-nd']} ${Style["mb-10"]}`}>
@@ -103,7 +104,7 @@ export default async function Home({searchParams}: Props) {
           </ul>
         </MainSection>
         {/* section 5 */}
-        <MainSection id="section5" classname={`${Style["main-section"]} ${Style["container"]}`}>
+        <MainSection id="experience" classname={`${Style["main-section"]} ${Style["container"]}`}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained Experience</h2>
           <ul className={`${Style["mb-4"]} ${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}` }>
             {data.experience && data.experience.map((exp:Data, index:number) => ( 
@@ -117,7 +118,7 @@ export default async function Home({searchParams}: Props) {
         </MainSection>
         {showModal && <Modal data={data.experience} id={Number(searchParams?.id)} />}
         {/* section 6 */}
-        <MainSection id="section6" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
+        <MainSection id="projects" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Projects and Open source contributions</h2>
           <ul className={`${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${Style["list-collection"]} ${montserrat.className}` }>
           {data.projects && data.projects.map((project:Data, index:number) => ( 
@@ -131,13 +132,13 @@ export default async function Home({searchParams}: Props) {
           <Link target='_blank' className={`${Style["mb-4"]} ${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href="https://github.com/yogeswarl">View more<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>
         </MainSection>  
         {/* section 7 */}
-        <MainSection id="section3" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
+        <MainSection id="request" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
           <article className={`${Style['inner-container']}`}>
             <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>I am Actively seeking Fall 23&apos; job opportunities in Data Science, Full stack / Front end development and Machine learning roles.</h2>
           </article>
         </MainSection>
         {/* section 8 */}
-         <MainSection id="section4" classname={[Style.container, Style["main-section"]]}>
+         <MainSection id="skills" classname={[Style.container, Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Skills I have gained over the Years</h2>
 
           <h3 className={`${Style["ta-center"]} ${Style["mb-6"]} ${Style["heading-lg"]} ${montserrat.className} ${Style["fw-semibold"]}`}>Techical Skills:</h3>
@@ -150,7 +151,7 @@ export default async function Home({searchParams}: Props) {
           </ul>
         </MainSection>
 
-        <MainSection id="section4" classname={[Style.container]}>
+        <MainSection id="socials" classname={[Style.container]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Socials</h2>
           <ul className={`${Style["mb-8"]} ${Style["fx"]} ${Style["fx-ch"]} ${Style["fx-w"]} ${montserrat.className}`}>
             <li className={`${Style['mb-2']} ${Style["fx"]} ${Style["fx-ch"]}`}>
@@ -177,7 +178,7 @@ export default async function Home({searchParams}: Props) {
         </MainSection>
         <footer id='footer'>
           <div className={`${Style.container} ${Style["fx"]} ${Style["fx-c"]} ${Style["fx-cv"]} ${Style["fx-ch"]}`}>
-            <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>Made with ❤️ by Yogeswar</p>
+            <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>Made with ❤️ using Next.js </p>
             <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>©{new Date().getFullYear()} Yogeswar</p>
           </div>
         </footer>

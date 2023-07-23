@@ -105,3 +105,39 @@
     top: calc(100% - 80px);
   }
 }
+.hamburger-icon{
+  width: 20px;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $color-white;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+  }
+  &.open{
+    &::before{
+      transform: rotate(45deg);
+      top:5px;
+    }
+    &::after{
+      transform: rotate(-45deg);
+      top:5px;
+    }
+  }
+
+}
