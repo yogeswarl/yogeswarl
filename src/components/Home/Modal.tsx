@@ -36,9 +36,7 @@ export const Modal: React.FC<ModalProps> =({data,id}): JSX.Element => {
 									<li
 										key={index}
 										className={`${Style["text-lg"]} ${Style["mb-2"]}`}
-									>
-										{desc}
-									</li>
+										dangerouslySetInnerHTML={{ __html: desc}} />
 							  ))
 							: null}
 					</ul>

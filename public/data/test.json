@@ -4,19 +4,19 @@
       "name": "CIBC",
       "time_period": "Sept 2022 - Apr 2023",
       "role": "Application Developer Intern",
-      "description": ["Implemented an automation script to install and configure universal forwarders, integrating team metadata and binding ip to block and monitor remote access to internal resources. Mock REST API test with cURL calls with a runtime of 10 seconds.",
-      "Collaborated in Designing and Implementing a monitoring script to notify internal teams' Slunk usage over email notification leveraging Python and Splunk lib to retrieve ingestion quotas per day leading to 40% cost reduction in Splunk license",
-      "Delivered customized data reports with search head querying to people leaders, utilizing Splunk Dashboard Visualization, forecasting end-of-month license usage while examining key metrics and insights to investigate patterns in collected data.",
-      "Designed and developed a migration script for older Splunk version to seamlessly transition Splunk Version 9 with mock API tests to resulting in prevention of data duplication, data loss and data corruption in Indexers search logs"],
+      "description": ["Implemented an automation script to install and configure universal forwarders, integrating team metadata and binding ip to block and monitor remote access to internal resources. Mock REST API test with cURL calls with <b>a runtime of 10 seconds</b>.",
+      "Collaborated in Designing and Implementing a monitoring script to notify internal teams' Slunk usage over email notification leveraging Python and Splunk lib to retrieve ingestion quotas per day leading to <b>40% cost reduction in Splunk license</b>",
+      "Delivered customized data reports with search head querying to people leaders, utilizing Splunk Dashboard Visualization, forecasting end-of-month license usage while <b>examining key metrics</b> and insights to investigate patterns in collected data.",
+      "Designed and developed a migration script for older Splunk version to seamlessly transition Splunk Version 9 with mock API tests to resulting in prevention of <b>data duplication, data loss and data corruption</b> in Indexers search logs"],
       "icons":[""]
     },
     {
       "name": "Full Creative",
       "time_period": "Aug 2019 - July 2021",
       "role": "Front-end Web Developer",
-      "description": ["Shipped a Responsive website with 100% performance metrics on lighthouse and a load time speed index of 1.1 second following standard web practices resulting in enhanced user experience and smooth functionality. Look at my work at https://www.adaptiveu.io.",
-      "Designed and tested a microservice solution with less than 3 seconds response time to complete automation of  the certificate generation for internship students, leveraging Google Cloud functions, Node.js and pdfkit, enhancing efficiency and reducing cost.",
-      "Increased branding blog's traffic to 145% with a rewrite of custom Wordpress theme, implementing web optimization techniques including lazy loading, URL prefetching and ES6 javascript best practices look at my work at https://www.wellreceived.com/blog/",
+      "description": ["Shipped a Responsive website with 100% performance metrics on lighthouse and a load time speed index of 1.1 second following standard web practices resulting in enhanced user experience and smooth functionality. Look at my work at <b>https://www.adaptiveu.io</b>.",
+      "Designed and tested a microservice solution with <b>less than 3 seconds response time</b> to complete automation of the certificate generation for internship students, leveraging Google Cloud functions, Node.js and pdfkit, enhancing efficiency and reducing cost.",
+      "Increased <b>branding blog's traffic to 145%</b> with a rewrite of custom Wordpress theme, implementing web optimization techniques including lazy loading, URL prefetching and ES6 javascript best practices look at my work at <b> https://www.wellreceived.com/blog/ </b>",
       "Implemented clean and modular code to integrate video calling into our chat application with React hooks and context API including a draggable feature for seamless user interaction between chat and phone with a smooth user experience and interface."],
       "icons":[""]
     },
@@ -24,7 +24,10 @@
       "name": "Freelancer(Contract)",
       "time_period": "Oct 2020 - Present",
       "role": "Full Stack Developer",
-      "description": ["Revamped entire code structure of an existing customer dashboard","point2"]
+      "description": ["Designed and Implemented a role based authentication and authorization for an Admin Dashboard Console for Student Learning Management system to monitor student's course progress over a time period. This project implements a custom react date picker to select a tutor's class timing with various flows such as onboarding, registration and signup for tutor and student with Data visualization of marks and attendance through ChartJs.",
+      "Developed the frontend application for an employee hours trackings system to enable employees to track their hours and generate reports for their managers. The project implements a service worker to track system movement towards working hours progress of an employee",
+      "Assisted a client to help build a user management console with project tracking and task managment functionality in PHP and MySQL with a custom calendar to track project deadlines and task completion."],
+      "icons":[""]
     }
   ],
   "projects" : [
