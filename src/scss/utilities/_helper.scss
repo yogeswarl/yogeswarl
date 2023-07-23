@@ -141,8 +141,8 @@
   }
 }
 .list-item{
-  height: calc(100vh - 200px);
-  overflow-y:scroll;
+  max-height: 480px;
+  overflow-y:auto;
   word-wrap: break-word;
   a{
     color: $color-white;
