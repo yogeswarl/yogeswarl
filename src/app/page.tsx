@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { montserrat } from './layout';
+import { montserrat } from './font';
 import Style from './page.module.scss'
 import Image from "next/image";
 import {MainSection} from '@/components/Home/Section'
@@ -12,12 +12,9 @@ interface Data {
 type Props = {
   searchParams: Record<string,string> | null | undefined
 }
-async function getData() {
-  const res = await fetch(`${process.env.URL}/data/test.json`)
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
+async function getLocalData() {
+  const res = await import("../../public/data/test.json")
+  return res
 }
 export default async function Home({searchParams}: Props) {
   const frontendIcons: string[] = ["react","javascript","html5","css3","sass","bootstrap","tailwindcss","webpack","google-analytics","google-appengine"];
@@ -25,7 +22,7 @@ export default async function Home({searchParams}: Props) {
   const techincalSkills: string[] = ["Next.js","React","Javascript","Typescript","Node.js","Express.js","Python","FastAPI","MongoDB","MySQL","REST API","E2E Testing","Google Cloud","Github Actions","Stripe","Wordpress","HTML5","CSS3","SASS","Bootstrap","Tailwind CSS","Webpack","Google Analytics","Google Cloud:- Cloud Run, Compute Engine, TPU's, App Engine, SQL","Amazon Web Services:- EC2, IAM, S3, Lambda","StrapiJs"]
   const PersonalSkills: string[] = ["Time Management","Oral and Written Communication","Problem Solving","Teamwork","Desire to Learn","Leadership","Adaptability","Creativity","Critical Thinking","Decision Making","Self-Motivating","Stress Management","Work Ethic","Researcher"]
   const internetAddress :Data= {"github":"https://github.com/yogeswarl","linkedin":"https://www.linkedin.com/in/yogeswarl/","twitter":"https://twitter.com/yogeswarl","medium":"https://medium.com/@yogeswarl","email":"yogi2198@gmail.com"}
-  const data = await getData()
+  const data = await getLocalData()
   const showModal = searchParams?.modal;
   return (
     <Fragment>
@@ -107,7 +104,7 @@ export default async function Home({searchParams}: Props) {
         <MainSection id="experience" classname={`${Style["main-section"]} ${Style["container"]}`}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Places where I gained Experience</h2>
           <ul className={`${Style["mb-4"]} ${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}` }>
-            {data.experience && data.experience.map((exp:Data, index:number) => ( 
+            {data.experience && data.experience.map((exp, index:number) => ( 
              <li key ={index} className={`${index} ${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
              <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{exp.name}</h3>
              <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{exp.role}</p>
