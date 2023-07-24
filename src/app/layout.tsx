@@ -15,6 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="Yogeswar Lakshmi Narayanan,Yogeshwar, Full Stack Developer, Machine Learning, Data Science, Portfolio" />
+        <meta name="author" content="Yogeswar Lakshmi Narayanan" />
+        <meta name="title" content="Yogeswar Lakshmi Narayanan | Full Stack Developer | Portfolio" /> 
+        <meta name="robots.txt" content="index, follow" />
+        <meta name="description" content="Full Stack Developer living in canada with over 3 years of experience building blazing fast applications for the web. Deep Learning Researcher at University of Windsor." />
         <link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico" /> 
         <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />

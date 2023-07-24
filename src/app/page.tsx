@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import {Data, Props} from '@/types/interface'
 import { montserrat } from './font';
 import Style from './page.module.scss'
 import Image from "next/image";
@@ -6,12 +7,7 @@ import {MainSection} from '@/components/Home/Section'
 import { Modal } from '@/components/Home/Modal';
 import Link from 'next/link'
 import {Header} from '@/components/Header'
-interface Data {
-  [key:string] : string
-} 
-type Props = {
-  searchParams: Record<string,string> | null | undefined
-}
+
 async function getLocalData() {
   const res = await import("../../public/data/test.json")
   return res

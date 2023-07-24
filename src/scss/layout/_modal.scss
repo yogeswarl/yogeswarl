@@ -26,9 +26,6 @@
         align-items: start;
       }
     }
-    &.card{
-      // background-color: $color-primary;
-    }
   }
   &-intro{
     @include breakpoint(desktop){
