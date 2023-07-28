@@ -35,9 +35,9 @@ export default function RootLayout({
         <meta property="og:title" content="Yogeswar Lakshmi Narayanan | Full Stack Developer | Portfolio" />
         <meta property="og:description" content="Full Stack Developer living in canada with over 3 years of experience building blazing fast applications for the web. Deep Learning Researcher at University of Windsor." />
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.yogeswarl.tech/" />
-        <link rel="alternate" href="https://www.yogeswarl.tech/" hrefLang="x-default" />
-        <link rel="canonical" href="https://www.yogeswarl.tech/" />
+        <meta property="og:url" content="https://www.yogeswarl.tech" />
+        <link rel="alternate" href="https://www.yogeswarl.tech" hrefLang="x-default" />
+        <link rel="canonical" href="https://www.yogeswarl.tech" />
       </head>
       <body className={`${poppins.className}`}>
         {children}
