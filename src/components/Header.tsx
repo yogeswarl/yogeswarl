@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import Style from '../app/page.module.scss'
 import Link from 'next/link'
 import { NextFont } from "next/dist/compiled/@next/font";
@@ -18,9 +18,9 @@ export const Header : React.FC<font> = ({font}) : JSX.Element => {
 
   return (
     <header className={`${Style['pos-fixed']} ${Style.header}`}>
-      <ul className={`${Style["container"]} ${Style.nav} ${Style.fx} ${Style['fx-sb']} ${secondaryFont}`}>
+      <ul className={`${Style.nav} ${Style.fx} ${Style['fx-sb']} ${secondaryFont}`}>
         <li>
-          <Link href={"/"} className={`${Style['tc-white']} ${Style['Logo']} ${Style["fw-semibold"]}`}>Yogeswar</Link>
+          <Link href={"/"} className={`${Style['tc-white']} ${Style['blinking-cursor']} ${Style["fw-semibold"]}`}>Yogeswar</Link>
         </li>
         <li className={`${Style['pos-rel']}`}>
         {isMobile.width && isMobile.width < 768 ? <button role ="button" aria-label="hamburger icon" className={`${Style['tc-white']} ${Style["hamburger-icon"]} ${isMenuOpen ? Style["open"]: null} ` } onClick={toggleMenu}></button> : null}
