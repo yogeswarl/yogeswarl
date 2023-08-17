@@ -11,3 +11,7 @@ export interface Data {
 export type Props = {
   searchParams: Record<string,string> | null | undefined
 }
+export type mobile = {
+  width: number | undefined,
+  height: number | undefined,
+}

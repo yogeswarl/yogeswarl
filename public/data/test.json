@@ -21,7 +21,7 @@
       "icons":[""]
     },
     {
-      "name": "Freelancer(Contract)",
+      "name": "Freelancer (Contract)",
       "time_period": "Oct 2020 - Present",
       "role": "Full Stack Developer",
       "description": ["Designed and Implemented a <b>role based authentication and authorization</b> for an Admin Dashboard Console for Student Learning Management system to monitor student's course progress over a time period. This project implements a custom react date picker to select a tutor's class timing with various flows such as onboarding, registration and signup for tutor and student with Data visualization of marks and attendance through ChartJs.",
