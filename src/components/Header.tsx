@@ -40,7 +40,7 @@ return (
         <Link href={"/"} className={`${Style['tc-white']} ${Style['Logo']} ${Style["fw-semibold"]}`}>Yogeswar</Link>
       </li>
       <li className={`${Style['pos-rel']}`}>
-      {isMobile.width && isMobile.width < 768 ? <button className={`${Style['tc-white']} ${Style["hamburger-icon"]} ${isMenuOpen ? Style["open"]: null} ` } onClick={toggleMenu}></button> : null}
+      {isMobile.width && isMobile.width < 768 ? <button role ="button" aria-label="hamburger icon" className={`${Style['tc-white']} ${Style["hamburger-icon"]} ${isMenuOpen ? Style["open"]: null} ` } onClick={toggleMenu}></button> : null}
         {(isMenuOpen || isMobile.width && isMobile.width >768) && <ul className={`${Style.fx} ${isMobile.width && isMobile.width < 768 ? Style["mobile-nav"] : null }`}>        
           <li key="experience"><Link href={"#experience"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]}`}>Experience</Link></li>
           <li key="Education"><Link href={"#education"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]}`}>Education</Link></li>
