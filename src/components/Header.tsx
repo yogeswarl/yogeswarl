@@ -25,11 +25,11 @@ export const Header : React.FC<font> = ({font}) : JSX.Element => {
         <li className={`${Style['pos-rel']}`}>
         {isMobile.width && isMobile.width < 768 ? <button role ="button" aria-label="hamburger icon" className={`${Style['tc-white']} ${Style["hamburger-icon"]} ${isMenuOpen ? Style["open"]: null} ` } onClick={toggleMenu}></button> : null}
           {(isMenuOpen || isMobile.width && isMobile.width >768) && <ul className={`${Style.fx} ${isMobile.width && isMobile.width < 768 ? Style["mobile-nav"] : null }`}>        
-            <li key="experience"><Link href={"#experience"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]}`}>Experience</Link></li>
-            <li key="Education"><Link href={"#education"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]}`}>Education</Link></li>
-            <li key="Projects"><Link href={"#projects"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]}`}>Projects</Link></li>
-            <li key="Skills"><Link href={"#skills"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]}`}>Skills</Link></li>
-            <li key="Socials"><Link href={"#socials"} className={`${Style['tc-white']} ${Style["fw-semibold"]}`}>Socials</Link></li>
+            <li key="experience"><Link href={"#experience"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-animline"]}`}>Experience</Link></li>
+            <li key="Education"><Link href={"#education"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-animline"]}`}>Education</Link></li>
+            <li key="Projects"><Link href={"#projects"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-animline"]}`}>Projects</Link></li>
+            <li key="Skills"><Link href={"#skills"} className={`${Style['tc-white']} ${Style['mr-4']} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-animline"]}`}>Skills</Link></li>
+            <li key="Socials"><Link href={"#socials"} className={`${Style['tc-white']} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-animline"]}`}>Socials</Link></li>
           </ul>
           }
         </li>

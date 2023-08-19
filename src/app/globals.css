@@ -27,6 +27,7 @@ html, body{
   width: 100%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 .App,#root{
   height: 100%;

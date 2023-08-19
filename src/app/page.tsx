@@ -102,9 +102,9 @@ export default async function Home({searchParams}: Props) {
           <ul className={`${Style["mb-4"]} ${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${montserrat.className}` }>
             {data.experience && data.experience.map((exp, index:number) => ( 
              <li key ={index} className={`${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
-             <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{exp.name}</h3>
+             <h3 className={`${Style.heading} ${Style["mb-3"]}`}>{exp.name}</h3>
              <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{exp.role}</p>
-             <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}> What I did here<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>
+             <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-underline"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}>What I did here</Link>
            </li>
             ))}
           </ul>
@@ -116,13 +116,13 @@ export default async function Home({searchParams}: Props) {
           <ul className={`${Style["container"]} ${Style["fx"]} ${Style["fx-sb"]} ${Style["fx-w"]} ${Style["list-collection"]} ${montserrat.className}` }>
           {data.projects && data.projects.map((project:Data, index:number) => ( 
              <li key ={index} className={`${index} ${Style.card} ${Style['card-md']} ${Style["mh-auto"]} ${Style["mb-8"]}`}>
-             <h3 className={`${Style.heading} ${Style["mb-4"]}`}>{project.name}</h3>
+             <h3 className={`${Style.heading} ${Style["mb-3"]}`}>{project.name}</h3>
              <p className={`${Style["text"]} ${Style["mb-2"]}`} >{project.description}</p>
-             {project.link && <Link target='_blank' className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href={`${project.link}`}> Link to project<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>}
+             {project.link && <Link target='_blank' className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-underline"]}`} href={`${project.link}`}> Link to project</Link>}
            </li>
             ))}
           </ul>
-          <Link target='_blank' className={`${Style["mb-4"]} ${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["icon-move"]}`} href="https://github.com/yogeswarl">View more<Image src='/less-than-icon.svg' alt='show more icon' height={20} width={20} /></Link>
+          <Link target='_blank' className={`${Style["mb-4"]} ${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-animline"]}`} href="https://github.com/yogeswarl">View more</Link>
         </MainSection>  
         {/* section 7 */}
         <MainSection id="request" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
