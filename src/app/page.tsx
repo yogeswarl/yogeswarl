@@ -22,7 +22,6 @@ export default async function Home({searchParams}: Props) {
   const showModal = searchParams?.modal;
   return (
     <Fragment>
-      {/* need to become a component */}
       <Header font={montserrat} />
       <Image src="/star.svg" alt="twinkling stars" width= {10} height={10} className={`${Style["pos-fixed"]} ${Style["top-right"]} ${Style.star}`}/>
       <Image src="/star.svg" alt="twinkling stars" width= {10} height={10} className={`${Style["pos-fixed"]} ${Style["top-left"]} ${Style.star}`} />
@@ -143,8 +142,7 @@ export default async function Home({searchParams}: Props) {
             {PersonalSkills.map((skill,index) => (<li key={index} className={`${Style['skill-box']}`}><span>{skill}</span></li>))}
           </ul>
         </MainSection>
-
-        <MainSection id="socials" classname={[Style.container]}>
+        <footer id='socials' className={`${Style['container']}`}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Socials</h2>
           <ul className={`${Style["mb-8"]} ${Style["fx"]} ${Style["fx-ch"]} ${Style["fx-w"]} ${montserrat.className}`}>
             <li className={`${Style['mb-2']} ${Style["fx"]} ${Style["fx-ch"]}`}>
@@ -168,8 +166,6 @@ export default async function Home({searchParams}: Props) {
               <Link target='_blank' className={`${Style['ml-2']} ${Style["tc-white"]} ${Style["text-xl"]} ${Style["fw-semibold"]}`} href={`mailto:${internetAddress.email}`}>Email</Link>
             </li>
           </ul>
-        </MainSection>
-        <footer id='footer'>
           <div className={`${Style.container} ${Style["fx"]} ${Style["fx-c"]} ${Style["fx-cv"]} ${Style["fx-ch"]}`}>
             <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>Made with ❤️ using Typescript and Next.js </p>
             <p className={`${Style["text-lg"]} ${Style["mb-2"]}`}>©{new Date().getFullYear()} Yogeswar</p>
