@@ -72,7 +72,7 @@ export default async function Home({searchParams}: Props) {
         {/* section 3 */}
         <MainSection id="current" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
           <article className={`${Style['inner-container']}`}>
-            <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Currently Pursuing MSc in Computer Science - Artificial Intelligence at UWindsor</h2>
+            <h2 className={`${Style["heading-lg"]} ${Style["fw-semibold"]}`}>Graduted MSc in Computer Science - Artificial Intelligence at UWindsor</h2>
           </article>
         </MainSection>
         {/* section 4 */}
@@ -103,7 +103,7 @@ export default async function Home({searchParams}: Props) {
              <li key ={index} className={`${Style.card} ${Style['card-sm']} ${Style["mh-auto"]} ${Style["mb-12"]}`}>
              <h3 className={`${Style.heading} ${Style["mb-3"]}`}>{exp.name}</h3>
              <p className={`${Style["text-xl"]} ${Style["mb-2"]}`} >{exp.role}</p>
-             <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-underline"]}`} href={`/?modal=true&id=${index}&name=${exp.name.replace(' ','_')}`}>What I did here</Link>
+             <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-underline"]}`} href={`/?modal=true&id=${index}`}>What I did here</Link>
            </li>
             ))}
           </ul>

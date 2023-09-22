@@ -1,6 +1,7 @@
 {
   "experience": [
     {
+      "id:": 1,
       "name": "CIBC",
       "time_period": "Sept 2022 - Apr 2023",
       "role": "Application Developer Intern",
@@ -11,6 +12,7 @@
       "icons":[""]
     },
     {
+      "id:": 2,
       "name": "Full Creative",
       "time_period": "Aug 2019 - July 2021",
       "role": "Front-end Web Developer",
@@ -21,6 +23,7 @@
       "icons":[""]
     },
     {
+      "id:": 3,
       "name": "Freelancer (Contract)",
       "time_period": "Oct 2020 - Present",
       "role": "Full Stack Developer",
