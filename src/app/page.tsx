@@ -33,7 +33,7 @@ export default async function Home({searchParams}: Props) {
         {/* section 1 */}
         <MainSection id="introduction" classname={[Style.fx, Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"],Style["slide-in"], Style["mb-12"] ]}>
           <article className={`${Style['inner-container']}`}>
-            <h1 className={`${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Hey 👋 , I am Yogeswar. Welcome to my portfolio</h1>
+            <h1 className={`${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Hey <span className={`${Style["waving-hand"]}`}>👋</span> , I am Yogeswar. Welcome to my portfolio</h1>
           </article>
           <a className={`${Style['icon-scroll']}`} href="#about"></a>
         </MainSection>
