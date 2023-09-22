@@ -20,6 +20,7 @@ export default async function Home({searchParams}: Props) {
   const internetAddress :Data= {"github":"https://github.com/yogeswarl","linkedin":"https://www.linkedin.com/in/yogeswarl/","twitter":"https://twitter.com/yogeswarl","medium":"https://medium.com/@yogeswarl","email":"yogi2198@gmail.com"}
   const data = await getLocalData()
   const showModal = searchParams?.modal;
+  console.log(searchParams)
   return (
     <Fragment>
       <Header font={montserrat} />
@@ -106,9 +107,11 @@ export default async function Home({searchParams}: Props) {
              <Link className={`${Style["tc-white"]} ${Style["fw-semibold"]} ${Style["link"]} ${Style["link-underline"]}`} href={`/?modal=true&id=${index}`}>What I did here</Link>
            </li>
             ))}
+            
           </ul>
         </MainSection>
         {showModal && <Modal data={data.experience} id={Number(searchParams?.id)} />}
+        
         {/* section 6 */}
         <MainSection id="projects" classname={[Style.fx, Style["fx-c"], Style.container, Style["fx-cv"], Style["fx-ch"], Style["main-section"]]}>
           <h2 className={`${Style["ta-center"]} ${Style["mb-12"]} ${Style["heading-xl"]} ${Style["fw-semibold"]}`}>Projects and Open source contributions</h2>
