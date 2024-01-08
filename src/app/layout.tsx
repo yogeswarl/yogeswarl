@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { poppins } from './font'
 export const metadata: Metadata = {
   title: 'Yogeswar Lakshmi Narayanan | Full Stack Developer | Portfolio',
@@ -41,7 +41,7 @@ export default function RootLayout({
       </head>
       <body className={`${poppins.className}`}>
         {children}
-        <Analytics />
+        <SpeedInsights />
       </body>
 
     </html>

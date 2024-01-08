@@ -17,7 +17,7 @@ export default async function Home({searchParams}: Props) {
   const backendIcons: string[] = ["node","express","typescript","nextjs","python","fastapi","mongodb","my-sql","rest-api","e2e-testing","google-cloud","github-actions","stripe","wordpress"]
   const techincalSkills: string[] = ["Next.js","React","Javascript","Typescript","Node.js","Express.js","Python","FastAPI","MongoDB","MySQL","REST API","E2E Testing","Google Cloud","Github Actions","Stripe","Wordpress","HTML5","CSS3","SASS","Bootstrap","Tailwind CSS","Webpack","Google Analytics","Google Cloud:- Cloud Run, Compute Engine, TPU's, App Engine, SQL","Amazon Web Services:- EC2, IAM, S3, Lambda","StrapiJs"]
   const PersonalSkills: string[] = ["Time Management","Oral and Written Communication","Problem Solving","Teamwork","Desire to Learn","Leadership","Adaptability","Creativity","Critical Thinking","Decision Making","Self-Motivating","Stress Management","Work Ethic","Researcher"]
-  const internetAddress :Data= {"github":"https://github.com/yogeswarl","linkedin":"https://www.linkedin.com/in/yogeswarl/","twitter":"https://twitter.com/yogeswarl","medium":"https://medium.com/@yogeswarl","email":"yogi2198@gmail.com"}
+  const internetAddress : Data= {"github":"https://github.com/yogeswarl","linkedin":"https://www.linkedin.com/in/yogeswarl/","twitter":"https://twitter.com/yogeswarl","medium":"https://medium.com/@yogeswarl","email":"yogi2198@gmail.com"}
   const data = await getLocalData()
   const showModal = searchParams?.modal;
   console.log(searchParams)
